@@ -1,0 +1,99 @@
+﻿@model KisiselBlog.Domain.Entities.Makale
+
+@{
+    ViewBag.Title = Model.Baslik;
+}
+
+
+<div class="blog-posts classic-blog single">
+    <div class="post format-image">
+        <div class="meta"><span class="date">@Model.EklenmeTarihi.ToShortDateString()</span><span class="categories"><a href="/Kategori/Index/@Model.KategoriID">@Model.Kategori.Adi</a></span><span class="comments"><a href="#yorum">@Model.Yorum.Count()<i class="icon-chat-1"></i></a></span></div>
+        <h1 class="post-title">@Model.Baslik</h1>
+        <figure class="main">
+            <img src="@Model.Resim.BuyukBoyut" alt="@Model.Baslik" />
+        </figure>
+        <div class="post-content">
+           @Html.Raw(Model.Icerik)
+            <div class="meta tags">
+                @foreach (var item in Model.Etiket)
+                {
+                    <a href="/Etiket/Index/@item.EtiketId">@item.Adi</a>
+                }
+            </div>
+        </div>
+    </div>
+    <!-- /.post yazar başlar -->
+
+</div>
+<!--  yazar başlar -->
+
+<div class="about-author dark-wrapper">
+    <div class="author-image"> <img alt="" src="/Content/style/images/art/author.jpg" /> </div>
+    <div class="author-details">
+        <h3>@Model.Yazar.Adi @Model.Yazar.Soyadi</h3>
+        <p>@Model.Yazar.Aciklama</p>
+        <ul class="social">
+            <li><a href="#"><i class="icon-s-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-s-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-s-pinterest"></i></a></li>
+            <li><a href="#"><i class="icon-s-dribbble"></i></a></li>
+            <li><a href="#"><i class="icon-s-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<!--  yazar biter -->
+
+<div class="divide100"></div>
+
+<!--  yorum başlar -->
+<a id="yorum" />
+<div id="comments">
+    <h3>@Model.Yorum.Count() yorum</h3>
+    <ol id="singlecomments" class="commentlist">
+        
+        @foreach (var item in Model.Yorum)
+        {
+            <li>
+                <div class="comment-wrapper">
+                    <div class="user"><img alt="" src="style/images/art/u1.jpg" class="avatar" /></div>
+                    <div class="message">
+                        <div class="arrow-box">
+                            <div class="info">
+                                <h2><a href="#">@item.AdSoyad</a></h2>
+                                <div class="meta"> <span class="date">@item.EklenmeTarihi</span> <span class="reply"><a class="reply-link" href="#">Yanıtla</a></span> </div>
+                            </div>
+                            <p>@item.Yorum1</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        }
+
+    </ol>
+</div>
+<!--  yorum biter -->
+
+<div class="divide100"></div>
+
+
+
+<div class="comment-form-wrapper">
+   
+    <form class="comment-form" name="form_name" action="#" method="post">
+        <div class="name-field">
+            <label><i class="icon-user"></i></label>
+            <input type="text" name="first" title="Ad*" />
+        </div>
+        <div class="email-field">
+            <label><i class="icon-mail-alt"></i></label>
+            <input type="text" name="first" title="Email*" />
+        </div>
+        
+        <div class="message-field">
+            <textarea name="textarea" id="textarea" rows="5" cols="30" title="Yorum"></textarea>
+        </div>
+        <input type="submit" value="Gönder" name="submit" class="btn btn-submit" />
+    </form>
+</div>

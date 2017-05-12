@@ -141,6 +141,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\blog-post.html" />
     <Content Include="Content\blog.html" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style\css\blank.html" />
@@ -346,6 +347,7 @@
     <Compile Include="Controllers\EtiketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\MakaleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -393,10 +395,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Kategori\KategoriWidget.cshtml" />
     <Content Include="Views\Etiket\EtiketlerWidget.cshtml" />
-    <Content Include="Views\Home\_SidebarSosyalMedya.cshtml" />
+    <Content Include="Views\Shared\_SidebarSosyalMedya.cshtml" />
     <Content Include="Views\Home\PopulerMakalelerWidget.cshtml" />
     <Content Include="Views\Shared\MakaleListeleWidget.cshtml" />
     <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Shared\_Arama.cshtml" />
+    <Content Include="Views\Etiket\Index.cshtml" />
+    <Content Include="Views\Makale\Detay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

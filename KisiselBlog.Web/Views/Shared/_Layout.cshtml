@@ -120,18 +120,14 @@
                     }
                     <!-- /.widget -->
                     @{
-                        Html.RenderAction("_SidebarSosyalMedya","Home");
+                        Html.RenderPartial("_SidebarSosyalMedya");
 
                     }
                     <!-- /.widget -->
-                    <div class="sidebox widget">
-                        <h3 class="widget-title section-title">Arama</h3>
-                        <form class="searchform" method="get">
-                            <label><i class="icon-search"></i></label>
-                            <input type="text" id="s2" name="s" value="Birşeyler ara.." onfocus="this.value=''" onblur="this.value='Search something'" />
-                            <button type="submit" class="btn">Ara</button>
-                        </form>
-                    </div>
+                    @{
+                        Html.RenderPartial("_Arama");
+
+                    }
                     <!-- /.widget -->
                     @*<div class="sidebox widget">
                         <h3 class="widget-title section-title">Custom Text</h3>
