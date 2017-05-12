@@ -1,0 +1,21 @@
+﻿@model IEnumerable<KisiselBlog.Domain.Entities.Makale>
+@using KisiselBlog.Domain.Entities
+
+<div class="sidebox widget">
+    <h3 class="widget-title section-title">Popular Makaleler</h3>
+    <ul class="post-list">
+   
+        @foreach (Makale item in Model)
+        {
+            <li>
+                <div class="icon-overlay"> <a href="blog-post.html"><img src="/Content/style/images/art/a1.jpg" alt="" /> </a> </div>
+                <div class="meta">
+                    <h5><a href="blog-post.html">@item.Baslik</a></h5>
+                    <em>@item.EklenmeTarihi.ToShortDateString() <span class="comments"><a href="#">@item.Yorum.Count <i class="icon-chat-1"></i></a></span></em>
+                </div>
+            </li>
+        }
+
+    </ul>
+    <!-- /.post-list -->
+</div>

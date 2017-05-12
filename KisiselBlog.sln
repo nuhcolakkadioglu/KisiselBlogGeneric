@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselBlog.Web", "KisiselBlog.Web\KisiselBlog.Web.csproj", "{822ABA4C-CA04-47EA-979F-BE272A4B27E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselBlog.Domain", "KisiselBlog.Domain\KisiselBlog.Domain.csproj", "{4FC61F92-296E-45F3-9C33-A280DA0270E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselBlog.Infrasturcture", "KisiselBlog.Infrasturcture\KisiselBlog.Infrasturcture.csproj", "{B52AF7EC-4B34-4D49-8DD7-CEC9EC67BDD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KisiselBlog.Services", "KisiselBlog.Services\KisiselBlog.Services.csproj", "{5C35A4FD-1710-459D-8816-265129AEDC42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{822ABA4C-CA04-47EA-979F-BE272A4B27E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822ABA4C-CA04-47EA-979F-BE272A4B27E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822ABA4C-CA04-47EA-979F-BE272A4B27E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822ABA4C-CA04-47EA-979F-BE272A4B27E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC61F92-296E-45F3-9C33-A280DA0270E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC61F92-296E-45F3-9C33-A280DA0270E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC61F92-296E-45F3-9C33-A280DA0270E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC61F92-296E-45F3-9C33-A280DA0270E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52AF7EC-4B34-4D49-8DD7-CEC9EC67BDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52AF7EC-4B34-4D49-8DD7-CEC9EC67BDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52AF7EC-4B34-4D49-8DD7-CEC9EC67BDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52AF7EC-4B34-4D49-8DD7-CEC9EC67BDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C35A4FD-1710-459D-8816-265129AEDC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C35A4FD-1710-459D-8816-265129AEDC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C35A4FD-1710-459D-8816-265129AEDC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C35A4FD-1710-459D-8816-265129AEDC42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

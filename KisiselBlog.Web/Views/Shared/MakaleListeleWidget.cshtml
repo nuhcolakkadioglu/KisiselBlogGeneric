@@ -1,0 +1,46 @@
+﻿@{ 
+    Layout = null;
+}
+@model IEnumerable<KisiselBlog.Domain.Entities.Makale>
+@using KisiselBlog.Domain.Entities
+
+@helper IcerikKisalat(string metin)
+{
+if (metin.Length > 300)
+{
+        <span>@Html.Raw(metin.Substring(0, 300))</span>
+}
+else
+{
+        @Html.Raw(metin)
+
+}
+}
+
+<div class="blog-posts col-blog">
+    @foreach (Makale item in Model)
+    {
+        <div class="post row">
+            <div class="col-sm-4">
+                <figure>
+                    <a href="/Makale/Detay/@item.MakaleId">
+                        <div class="text-overlay">
+                            <div class="info"><span>Devamı oku..</span></div>
+                        </div>
+                        <img src="@item.Resim.OrtaBoyut" alt="@item.Baslik" />
+                    </a>
+                </figure>
+            </div>
+            <div class="col-sm-8 post-content">
+                <div class="meta"><span class="date">@item.EklenmeTarihi.ToShortDateString()</span><span class="comments"><a href="#">@item.Yorum.Count() <i class="icon-chat-1"></i></a></span></div>
+                <h2 class="post-title"><a href="/Makale/Detay/@item.MakaleId">@item.Baslik</a></h2>
+                <p>
+                    @IcerikKisalat(item.Icerik)
+                </p>
+            </div>
+        </div>
+    }
+
+
+</div>
+<!-- /.blog-posts -->
