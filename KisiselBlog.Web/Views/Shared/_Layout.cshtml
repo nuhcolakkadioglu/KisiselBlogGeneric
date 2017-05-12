@@ -38,7 +38,7 @@
                     </div>
                     <nav class="collapse navbar-collapse pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="/Index/Home">Anasayfa</a></li>
+                            <li><a href="/Home/Index">Anasayfa</a></li>
                             <li class="current dropdown">
                                 <a href="#" class="dropdown-toggle js-activated">Journal</a>
                                 <ul class="dropdown-menu">
@@ -115,11 +115,23 @@
 
                 <!-- /.content -->
                 <aside class="col-sm-4 sidebar lp30">
-                    @RenderSection("PopulerMakaleler",false)
+                    @{
+                        Html.RenderAction("PopulerMakalelerWidget", "Home");
+                    }
                     <!-- /.widget -->
-                    @RenderSection("SosyalMedya",false)
+                    @{
+                        Html.RenderAction("_SidebarSosyalMedya","Home");
+
+                    }
                     <!-- /.widget -->
-                    @RenderSection("Arama",false)
+                    <div class="sidebox widget">
+                        <h3 class="widget-title section-title">Arama</h3>
+                        <form class="searchform" method="get">
+                            <label><i class="icon-search"></i></label>
+                            <input type="text" id="s2" name="s" value="Birşeyler ara.." onfocus="this.value=''" onblur="this.value='Search something'" />
+                            <button type="submit" class="btn">Ara</button>
+                        </form>
+                    </div>
                     <!-- /.widget -->
                     @*<div class="sidebox widget">
                         <h3 class="widget-title section-title">Custom Text</h3>
@@ -127,10 +139,14 @@
                         <p>Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue. Fusce  mauris condimentum.</p>
                     </div>*@
                     <!-- /.widget -->
-                    @RenderSection("Kategoriler",false)
+                   @{
+                       Html.RenderAction("KategoriWidget", "Kategori");
+                }
                  
                     <!-- /.widget -->
-                    @RenderSection("Etiketler",false)
+                    @{
+                        Html.RenderAction("EtiketlerWidget", "Etiket");
+                    }
                     <!-- /.widget -->
                 </aside>
                 <!-- /.col-sm-4 .sidebar -->

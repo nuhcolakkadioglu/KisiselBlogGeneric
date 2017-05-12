@@ -35,5 +35,9 @@ namespace KisiselBlog.Web.Controllers
         {
             return PartialView(_makaleServices.GetAll().OrderByDescending(m=>m.GoruntulenmeSayisi).Take(3));
         }
+        public ActionResult _SidebarSosyalMedya()
+        {
+            return View();
+        }
     }
 }
